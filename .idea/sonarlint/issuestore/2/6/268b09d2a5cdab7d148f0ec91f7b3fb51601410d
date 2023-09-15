@@ -1,0 +1,14 @@
+
+L	java:S106"+Replace this use of System.out by a logger.(ƒëƒÅÿÿÿÿÿ8‹Ù‡¨©1
+L	java:S106"+Replace this use of System.out by a logger.(ÉüÖ©øÿÿÿÿ8Ù‡¨©1
+G	java:S106"+Replace this use of System.out by a logger.(õÄ™µ8Ù‡¨©1
+L	java:S106#"+Replace this use of System.out by a logger.(ÉüÖ©øÿÿÿÿ8Ù‡¨©1
+L	java:S106%"+Replace this use of System.out by a logger.(ûÀŸÔÿÿÿÿÿ8Ù‡¨©1
+G	java:S106&"+Replace this use of System.out by a logger.(îİçÜ8Ù‡¨©1
+G	java:S106("+Replace this use of System.out by a logger.(¼èãà8Ù‡¨©1
+I
+java:S1602)",Remove useless curly braces around statement(¦°Á¨8Ù‡¨©1
+d
+java:S1612)"GReplace this lambda with method reference 'clientesRepository::delete'.(¦°Á¨8©ş¨©1
+L	java:S1060"+Replace this use of System.out by a logger.(íªÑÿÿÿÿÿ8‘Ù‡¨©1
+L	java:S1062"+Replace this use of System.out by a logger.(†¡şÿÿÿÿ8‘Ù‡¨©1

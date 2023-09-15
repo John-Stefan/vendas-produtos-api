@@ -25,30 +25,8 @@ public class App
             List<Cliente> todosClientes = clientesRepository.findAll();
             todosClientes.forEach(System.out::println);
 
-            System.out.println("Atualizando Clientes");
-            todosClientes.forEach(c -> {
-                c.setNome(c.getNome() + " atualizado.");
-                clientesRepository.save(c);
-            });
-
-            todosClientes = clientesRepository.findAll();
-            todosClientes.forEach(System.out::println);
-
-            System.out.println("Buscando Clientes");
-            clientesRepository.findByNomeLike("%Ala%").forEach(System.out::println);
-
-            System.out.println("Deletando Clientes");
-            clientesRepository.findAll().forEach(c -> {
-                clientesRepository.delete(c);
-            });
-
-            todosClientes = clientesRepository.findAll();
-
-            if (todosClientes.isEmpty()) {
-                System.out.println("Nenhum cliente encontrado!");
-            } else {
-                System.out.println("Foram encontrados clientes!");
-            }
+            System.out.println("Buscando clientes");
+            clientesRepository.findByNomeOrId("Ala", 1).forEach(System.out::println);
         };
     }
 
