@@ -7,26 +7,15 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.List;
 
 @SpringBootApplication
-@RestController
 public class App
 {
     @Bean
-    public CommandLineRunner init(@Autowired ClientesRepository clientesRepository) {
+    public CommandLineRunner commandLineRunner(@Autowired ClientesRepository clientesRepository) {
         return args -> {
-            System.out.println("Salvando Clientes");
-            clientesRepository.save(new Cliente("Steven"));
-            clientesRepository.save(new Cliente("Aladimos"));
-
-            List<Cliente> todosClientes = clientesRepository.findAll();
-            todosClientes.forEach(System.out::println);
-
-            System.out.println("Buscando clientes");
-            clientesRepository.findByNomeOrId("Ala", 1).forEach(System.out::println);
+            Cliente c = new Cliente(null, "Aladimos");
+            clientesRepository.save(c);
         };
     }
 

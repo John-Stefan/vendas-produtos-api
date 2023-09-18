@@ -13,7 +13,7 @@ public class Produto {
     private Integer id;
     @Column(name = "descricao", length = 100)
     private String descricao;
-    @Column(name = "preco_unitario", length = 20, precision = 2)
+    @Column(name = "preco_unitario", precision = 20, scale = 2)
     private BigDecimal preco;
 
     //region Getters and Setters
