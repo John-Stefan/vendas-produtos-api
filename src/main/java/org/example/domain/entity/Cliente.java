@@ -1,6 +1,7 @@
 package org.example.domain.entity;
 
 import jakarta.persistence.*;
+import net.minidev.json.annotate.JsonIgnore;
 
 import java.util.List;
 
@@ -13,7 +14,8 @@ public class Cliente {
     private Integer id;
     @Column(name = "nome", length = 100)
     private String nome;
-    @OneToMany(mappedBy = "cliente")
+    @JsonIgnore
+    @OneToMany(mappedBy = "cliente", fetch = FetchType.LAZY)
     private List<Pedido> pedidos;
 
     //region Construtoes
