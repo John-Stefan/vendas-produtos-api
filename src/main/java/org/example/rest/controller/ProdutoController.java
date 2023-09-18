@@ -42,6 +42,16 @@ public class ProdutoController {
                 .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Produto não encontrado."));
     }
 
+    @PutMapping("{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void update(@PathVariable Integer id, @RequestBody Produto produto) {
+        produtosRepository.findById(id).map(produtoExistente -> {
+            produto.setId(produtoExistente.getId());
+            produtosRepository.save(produto);
+            return produtoExistente;
+        }).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Produto não encontrado."));
+    }
+
     @GetMapping
     public List<Produto> find(Produto filtro) {
         ExampleMatcher matcher = ExampleMatcher
