@@ -1,4 +1,5 @@
 
-N
-java:S1068
-"1Remove this unused "pedidoService" private field.(½Ü³„8ïåçéª1
+^
+java:S1612)"<Replace this lambda with method reference 'this::converter'.(ÌýÊ¶üÿÿÿÿ8Ö§î¼«1
+t
+java:S6204K"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ëÙÈ¡ÿÿÿÿÿ8Þ§î¼«1

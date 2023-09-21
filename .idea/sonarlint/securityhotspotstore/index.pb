@@ -79,3 +79,17 @@ Q.idea/sonarlint/securityhotspotstore/4/3/435ce63adb2da61c3d81f14832f9f78056853e
 Q.idea/sonarlint/securityhotspotstore/3/6/36f0c86e465af5fa609d5a29f87584400be5f4a9,2\4\24adb42f52c1eecabd887de388346554a58d4368
 Å
 Q.idea/sonarlint/securityhotspotstore/1/0/10a2528d90d467fd08ba36aefa5726de1807a8f5,7\f\7f198c51f5d6523b0de1e44e08e0344d41379f50
+u
+Esrc/main/java/org/example/exception/PedidoNaoEncontradoException.java,c\9\c9f2a51b01673a95b9fd620f396dfc3f8376924a
+z
+Jsrc/main/java/org/example/rest/controller/ApplicationControllerAdvice.java,3\6\36199c458d31ffb900d53c6c036eff384943a378
+r
+Bsrc/main/java/org/example/rest/dto/AtualizacaoStatusPedidoDTO.java,e\c\ec6fb498637aaace98087bf47b8d8e949222c79d
+h
+8src/main/java/org/example/domain/enums/StatusPedido.java,7\5\7587484165bea2da4bfbc4c1b4c7c3907bac6621
+l
+<src/main/java/org/example/rest/dto/InformacoesPedidoDTO.java,e\1\e1ca4ac1187153a39946a9996f08a43db473aac1
+o
+?src/main/java/org/example/rest/dto/InformacaoItemPedidoDTO.java,b\4\b4918df7aa8caa68437e10ce1f438c039df0da95
+]
+-src/main/java/org/example/rest/ApiErrors.java,b\3\b3342747640cb7b94699975a7ff90c3c10a9731b

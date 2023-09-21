@@ -18,6 +18,7 @@ public class Pedido {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Integer id;
+
     @ManyToOne
     @JoinColumn(name = "cliente_id")
     private Cliente cliente;

@@ -1,0 +1,7 @@
+
+L
+java:S2201D"/The return value of "orElseThrow" must be used.(…¬Ùœ8§ÿ‹½«1
+k
+java:S1612D"NReplace this lambda with method reference 'PedidoNaoEncontradoException::new'.(…¬Ùœ8ÃýÙ¼«1
+o
+java:S6204Y"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(œçÖß8ÅýÙ¼«1

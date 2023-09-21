@@ -1,6 +1,8 @@
 package org.example.domain.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -15,8 +17,12 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
     private Integer id;
+
     @Column(name = "descricao", length = 100)
+    @NotEmpty(message = "{campo.descricao.obrigatorio}")
     private String descricao;
+
     @Column(name = "preco_unitario", precision = 20, scale = 2)
+    @NotNull(message = "{campo.preco.obrigatorio}")
     private BigDecimal preco;
 }
