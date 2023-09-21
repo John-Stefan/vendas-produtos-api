@@ -5,10 +5,12 @@ import org.example.domain.entity.Cliente;
 import org.example.domain.entity.ItemPedido;
 import org.example.domain.entity.Pedido;
 import org.example.domain.entity.Produto;
+import org.example.domain.enums.StatusPedido;
 import org.example.domain.repository.ClientesRepository;
 import org.example.domain.repository.ItensPedidoRepository;
 import org.example.domain.repository.PedidosRepository;
 import org.example.domain.repository.ProdutosRepository;
+import org.example.exception.PedidoNaoEncontradoException;
 import org.example.exception.RegraNegocioException;
 import org.example.rest.dto.ItemPedidoDTO;
 import org.example.rest.dto.PedidoDTO;
@@ -40,6 +42,7 @@ public class PedidoServiceImpl implements PedidoService {
         pedido.setTotal(pedidoDTO.getTotal());
         pedido.setDataPedido(LocalDate.now());
         pedido.setCliente(cliente);
+        pedido.setStatus(StatusPedido.REALIZADO);
 
         List<ItemPedido> itemsPedidos = converterItems(pedido, pedidoDTO.getItens());
         pedidosRepository.save(pedido);
@@ -52,6 +55,17 @@ public class PedidoServiceImpl implements PedidoService {
     @Override
     public Optional<Pedido> obterPedidoCompleto(Integer id) {
         return pedidosRepository.findByIdFetchItens(id);
+    }
+
+    @Override
+    @Transactional
+    public void atualizaStatus(Integer id, StatusPedido statusPedido) {
+        pedidosRepository
+                .findById(id)
+                .map(pedido -> {
+                    pedido.setStatus(statusPedido);
+                    return pedidosRepository.save(pedido);
+                }).orElseThrow(() -> new PedidoNaoEncontradoException());
     }
 
     private List<ItemPedido> converterItems(Pedido pedido, List<ItemPedidoDTO> itemPedidoDTOS) {

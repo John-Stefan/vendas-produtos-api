@@ -2,6 +2,7 @@ package org.example.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.example.domain.enums.StatusPedido;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -27,6 +28,10 @@ public class Pedido {
 
     @OneToMany(mappedBy = "pedido")
     private List<ItemPedido> itens;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "status")
+    private StatusPedido status;
 
     @Override
     public String toString() {
