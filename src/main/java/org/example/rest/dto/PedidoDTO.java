@@ -1,6 +1,6 @@
 package org.example.rest.dto;
 
-import jakarta.validation.constraints.NotNull;
+import javax.validation.constraints.NotNull;
 import lombok.*;
 import org.example.validation.NotEmptyList;
 

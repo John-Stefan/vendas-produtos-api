@@ -1,6 +1,6 @@
 package org.example.rest.controller;
 
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import org.example.domain.entity.Produto;
 import org.example.domain.repository.ProdutosRepository;
 import org.springframework.data.domain.Example;

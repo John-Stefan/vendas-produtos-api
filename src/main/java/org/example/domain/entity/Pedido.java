@@ -1,6 +1,6 @@
 package org.example.domain.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 import org.example.domain.enums.StatusPedido;
 

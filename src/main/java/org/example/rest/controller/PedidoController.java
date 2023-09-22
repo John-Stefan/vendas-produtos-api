@@ -1,6 +1,6 @@
 package org.example.rest.controller;
 
-import jakarta.validation.Valid;
+import javax.validation.Valid;
 import org.example.domain.entity.ItemPedido;
 import org.example.domain.entity.Pedido;
 import org.example.domain.enums.StatusPedido;

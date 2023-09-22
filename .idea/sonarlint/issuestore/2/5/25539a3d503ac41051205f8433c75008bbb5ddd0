@@ -1,5 +1,5 @@
 
 ^
-java:S1612)"<Replace this lambda with method reference 'this::converter'.(ÌıÊ¶üÿÿÿÿ8Ö§î¼«1
+java:S1612*"<Replace this lambda with method reference 'this::converter'.(ÌıÊ¶üÿÿÿÿ8Ö§î¼«1
 t
-java:S6204K"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ëÙÈ¡ÿÿÿÿÿ8Ş§î¼«1
+java:S6204L"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(ëÙÈ¡ÿÿÿÿÿ8Ş§î¼«1

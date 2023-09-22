@@ -1,7 +1,7 @@
 package org.example.validation;
 
-import jakarta.validation.Constraint;
-import jakarta.validation.Payload;
+import javax.validation.Constraint;
+import javax.validation.Payload;
 import org.example.validation.constraintValidation.NotEmptyListValidator;
 
 import java.lang.annotation.ElementType;
